@@ -1,0 +1,3 @@
+module buildWML
+
+go 1.24.3
