@@ -181,3 +181,5 @@ func removeOneCourse(w http.ResponseWriter, r *http.Request) {
 	}
 	json.NewEncoder(w).Encode("removed the course" + params["id"])
 }
+
+
