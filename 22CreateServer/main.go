@@ -76,8 +76,9 @@ func PerformPostFormreq() {
 	data.Add("lastname", "Singh")
 	data.Add("email", "gg@gg.ai")
 
-	resp, _ := http.PostForm(myUrl, data)
+	resp, err := http.PostForm(myUrl, data)
 
+	CheckNilErr(err)
 	defer resp.Body.Close()
 
 	content, _ := ioutil.ReadAll(resp.Body)
